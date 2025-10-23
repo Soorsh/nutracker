@@ -11,12 +11,23 @@ def build(
     for value_name, value in zip(values_name, values):
         if value is None:
             raise ValueError(f"error: {value_name} is None")
-        
-    if name.strip() == "":
-        raise ValueError(f"error: name is empty")
-    
+        if isinstance(value, bool):
+            raise ValueError(f"error: {value_name} is bool")
+        if value_name == "name":
+            if isinstance(value, str): 
+                if value.strip() == "":
+                    raise ValueError(f"error: {value_name} is empty")
+            else:
+                raise ValueError(f"error: {value_name} is not str")
+        else:
+            if not isinstance(value, (float, int)):
+                raise ValueError(f"error: {value_name} is not number")
+            else: 
+                if  value < 0:
+                    raise ValueError(f"error: {value_name} is not positive")
+
     return {
-        "name_product": name,
+        "product_name": name,
         "product_calories": calories,
         "product_proteins": proteins,
         "product_carbs": carbs,
