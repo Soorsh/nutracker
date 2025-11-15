@@ -22,7 +22,8 @@ def init(mode: str = "ensure") -> None:
         РЕШЕНИЕ: Нужно добавить SQL запросы для создания таблиц
         """
         sqlite3.connect(db_path)
-        sqlite3.connect(db_path).close()
+        cur.execute("CREATE TABLE Products (id INTEGER PRIMARY KEY, name TEXT, description TEXT, price REAL")
+        conn.close()
 
     def check_tables() -> None:
         """
@@ -42,10 +43,6 @@ def init(mode: str = "ensure") -> None:
         pass
 
     def delete_db() -> None:
-        """
-        ПРОБЛЕМА: Двойное закрытие соединения!
-        РЕШЕНИЕ: Убрать второй conn.close()
-        """
         conn.close()
         db_path.unlink()
         
