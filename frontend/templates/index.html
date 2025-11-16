@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutracker - Фронтенд</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Frontend Part</h1>
+        <p>Эта часть отвечает за фронтенд. Разработчик будет работать здесь.</p>
+        
+        <div id="api-status">
+            <p>Статус API: <span id="api-status-text">Проверка...</span></p>
+        </div>
+        
+        <div id="content-area">
+            <!-- Сюда будет подгружаться контент -->
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
