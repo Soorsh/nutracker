@@ -1,0 +1,11 @@
+CREATE TABLE products (
+    id  INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL UNIQUE,
+    calories REAL NOT NULL,
+    protein REAL NOT NULL,
+    fats REAL NOT NULL,
+    carbs REAL NOT NULL,
+    image_path TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
