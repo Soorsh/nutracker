@@ -6,7 +6,7 @@ server_notes.py
 
 # vscode
 .vscode/
-.continue/
+.qwen
 
 # db
 *.db
