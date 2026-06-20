@@ -67,12 +67,12 @@ function renderProducts(products) {
             <tbody>
                 ${products.map(p => `
                     <tr>
-                        <td>${p.product_name || p.name || '—'}</td>
-                        <td>${p.product_calories ?? p.calories ?? '—'}</td>
-                        <td>${p.product_proteins ?? p.proteins ?? '—'}</td>
-                        <td>${p.product_carbs ?? p.carbs ?? '—'}</td>
-                        <td>${p.product_fats ?? p.fats ?? '—'}</td>
-                        <td><button class="btn-delete" data-id="${p.id || p.product_id || ''}">✕</button></td>
+                        <td>${p.name || '—'}</td>
+                        <td>${p.calories ?? '—'}</td>
+                        <td>${p.protein ?? '—'}</td>
+                        <td>${p.carbs ?? '—'}</td>
+                        <td>${p.fats ?? '—'}</td>
+                        <td><button class="btn-delete" data-id="${p.id || ''}">✕</button></td>
                     </tr>
                 `).join('')}
             </tbody>
@@ -163,9 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const productData = {
                 name: document.getElementById('product-name').value,
                 calories: parseFloat(document.getElementById('product-calories').value),
-                proteins: parseFloat(document.getElementById('product-proteins').value),
-                carbs: parseFloat(document.getElementById('product-carbs').value),
-                fats: parseFloat(document.getElementById('product-fats').value)
+                protein: parseFloat(document.getElementById('product-proteins').value),
+                fats: parseFloat(document.getElementById('product-fats').value),
+                carbs: parseFloat(document.getElementById('product-carbs').value)
             };
 
             await addProduct(productData);
