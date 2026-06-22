@@ -17,16 +17,30 @@ body {
     margin: 0 auto;
 }
 
+.header__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header__icon {
+    position: absolute;
+    margin-bottom: 15px;
+    margin-right: 280px;
+    z-index: 1;
+}
+
+.header__title {
+    font-size: 2.5rem;
+    margin: 0 0 10px;
+    color: #16a34a;
+}
+
 /* Header */
 header {
     text-align: center;
     margin-bottom: 30px;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin: 0 0 10px;
-    color: #16a34a;
 }
 
 #api-status {

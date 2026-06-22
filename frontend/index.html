@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico"><!-- 32x32 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="static/css/main.css">
     <title>Nutracker - Трекер питания</title>
-    <link rel="stylesheet" href="/static/css/main.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🍏 Nutracker</h1>
+            <div class="header__item">
+                <img class="header__icon" src="images/header-logo.png" alt="Apple">
+                <h1 class="header__title">Nutracker</h1>
+            </div>
             <p id="api-status">Статус: <span class="status-text">Загрузка...</span></p>
         </header>
 
@@ -46,9 +51,7 @@
         </main>
     </div>
 
-    <div>
-        <h1>aye tatari</h1>
-    </div>
+
 
     <script src="/static/js/main.js"></script>
 </body>
